@@ -135,14 +135,6 @@ outcome_results_df_new['learning outcome name'] = outcome_names
 outcome_results_df_new["learning outcome rating"] = outcome_ratings
 
 
-# Deletes ivalid data rows using the date as a method to delete the invalid data and resets the index
-# of the dataframe
-#-------------------------------------------------------------------------------------------------
-invalid_data = '2023-11-15'
-outcome_results_df_new = outcome_results_df_new[~outcome_results_df_new['submitted_or_assessed_at'].str[:len(invalid_data)].eq(invalid_data)]
-outcome_results_df_new = outcome_results_df_new.reset_index(drop=True)
-#-------------------------------------------------------------------------------------------------
-
 # Deletes some unnecessary columns
 outcome_results_df_new.drop(outcome_results_df_new.columns[[0,1,3,4,5,6,7,8,9,10,11,13]], axis=1, inplace=True)
  
