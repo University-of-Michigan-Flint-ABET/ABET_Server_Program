@@ -55,6 +55,7 @@ https://www.youtube.com/watch?v=PVR0gUCzIlY
 
 Describing a little more in details Canvas Outcomes
 https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Outcomes/ta-p/75
+
 Canvas API docs
 https://canvas.instructure.com/doc/api/
 
