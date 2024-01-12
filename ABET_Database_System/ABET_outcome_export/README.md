@@ -12,7 +12,9 @@ match_UMID_data: used to compair the canvas ID's stored in both the outcome resu
 file_orginization: creates a directory to store the outcome results .csv file and the graph images. It does this by taking the time stamp from one outcome submission and taking the month, day, and year out of it. It then compares the month and day to determine the semester the evaluation took place. It then creates two folders, one for the year if it does not already exist, and inside of the year folder it creates another folder for each semester, if one is not already created. It then returns the directory path.
 
 The Canvas_Graph_functions.py houses functions involved in creating various graphs and charts using the outcome data obtained from Canvas. These functions generate three distinct types of visualizations: stacked bar graphs, regular bar graphs, and pie charts for each outcome. The bar graphs encapsulate data for all outcomes in the course, while each outcome has an associated pie chart. Both the pie and stacked bar graphs display the percentage distribution of students across four different levels: beginner, apprentice, proficient, and exemplary. Additionally, these functions organize generated images into 'bar_graph' or 'pie_chart' folders within storage and website directories to enhance data organization.
+
 Functions:
+
 bargraph: Creates the bar graph using the outcome data. It accepts 3 parameters. 
 outcomeDataframe: which is the data frame that the outcome results are stored in.
 storage_directory_path: the directory path that is used to store the outcome results .csv file as well as all of the graphs and charts being produced. Used for main and backup storage.
@@ -27,6 +29,7 @@ stackedbar_graph: Creates the stacked bar graph using the outcome data. It accep
 outcomeDataframe: which is the data frame that the outcome results are stored in.
 storage_directory_path: the directory path that is used to store the outcome results .csv file as well as all of the graphs and charts being produced. Used for main and backup storage.
 website_directory_path: the directory path that is used to store the images of the graphs and charts to be pulled to be displayed on the web server.
+
 
 The export_outcomes.py function calls the functions provided within the canvas_API_functions.py and canvas_graph_functions.py to extract the outcome data from the Canvas API, build a data frame using that data and use that dataframe to create different charts and graphs showcasing that data. They also export the data contained in a .csv file and the .png images of the graphs/charts to the ABET_export_outcomes directory (for storage and as a backup) as well as to the static/images folder that is in the ABET_site folder (to be pulled to be used within the webserver.)
 
