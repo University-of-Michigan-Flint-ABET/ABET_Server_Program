@@ -18,7 +18,8 @@ def get_page(url, headers, specific_ids, type_lookup):
 # Extracts all infomration for each course
 #-----------------------------------------
   if type_lookup == "courses":
-    response = requests.get(url + 'courses', headers=headers)
+    params = {'enrollment_state' : 'active'}
+    response = requests.get(url + 'courses', headers=headers, params=params)
 
 #------------------------------------------------------
 # Extracts the outcome results for a specfic course
