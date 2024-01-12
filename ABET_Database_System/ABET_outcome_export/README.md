@@ -15,6 +15,7 @@ file_orginization: creates a directory to store the outcome results .csv file an
 
 The Canvas_Graph_functions.py houses functions involved in creating various graphs and charts using the outcome data obtained from Canvas. These functions generate three distinct types of visualizations: stacked bar graphs, regular bar graphs, and pie charts for each outcome. The bar graphs encapsulate data for all outcomes in the course, while each outcome has an associated pie chart. Both the pie and stacked bar graphs display the percentage distribution of students across four different levels: beginner, apprentice, proficient, and exemplary. Additionally, these functions organize generated images into 'bar_graph' or 'pie_chart' folders within storage and website directories to enhance data organization.
 
+
 Functions:
 
 bargraph: Creates the bar graph using the outcome data. It accepts 3 parameters. 
